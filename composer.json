@@ -1,0 +1,19 @@
+{
+    "name": "2023/carbon",
+    "description": "a ui framwork on php",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "2023\\Carbon\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MagicalAtom",
+            "email": "magicsoftware.org@gmail.com"
+        }
+    ],
+    "require": {
+        "php-curl-class/php-curl-class": "^9.12"
+    }
+}

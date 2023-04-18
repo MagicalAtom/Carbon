@@ -1,0 +1,58 @@
+#!/usr/bin/env php
+<?php
+include "Carbon/Artisan.php";
+include "Carbon/loader.php";
+a:$Command = System::GetLine('Enter A command : ');
+//if ($Command == 'compress'){
+//    $filename = includes::GetLine('Enter a FILE name , without folder and extension just file name');
+//    Carbon::Compress('help');
+//}
+switch ($Command){
+    case "help":
+        echo "
+    ------------------------- Command List -----------------------------
+    run Server ===> serve , 
+    
+   compress style (file name) ===> compress (file name) , 
+   
+   
+   ==== exit CommandLine ===> exit
+    ";
+  goto a;
+        break;
+    case "serve":
+        echo "start soon . . . 3second" . PHP_EOL;
+        system('php -S localhost:8000 -t public');
+        break;
+    case "exit":
+        echo "Good By Sweet . . . 3 second exit command" . PHP_EOL;
+        sleep(3);
+        system('exit');
+        break;
+    case "compress":
+        $filename = System::GetLine('Enter a FILE name , without folder and extension just file name : ');
+        echo  "process . . . ";
+        Artisan::Compress($filename);
+        Artisan::Compress($filename);
+        echo "compress file success";
+        echo PHP_EOL;
+            goto a;
+        break;
+    case "delete":
+        $filename = System::GetLine('Enter a FILE name , without folder and extension just file name : ');
+        echo  "process . . . ";
+        Artisan::delete($filename);
+        echo "delete last style successful" . PHP_EOL;
+        echo PHP_EOL;
+        goto a;
+        break;
+
+    default:
+        echo "Command not Found! SEND ' help ' " . PHP_EOL;
+        $Command .= System::GetLine('Enter A command : ');
+        echo PHP_EOL;
+        goto a;
+        break;
+}
+
+
