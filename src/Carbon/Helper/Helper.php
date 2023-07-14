@@ -1,5 +1,5 @@
 <?php
-//include "Carbon/loader.php";
+//include "src/loader.php";
 
 
 function url($filename){
@@ -36,7 +36,7 @@ function site(){
         'url' => 'other2.test', // put url this section
     ];
 
- $folder =    substr($_SERVER['SCRIPT_NAME'],1,6) . "/";
+ $folder = substr($_SERVER['SCRIPT_NAME'], 1, 6) . "helper.php/";
     $domain = 'http://' . $config['url'] . "/";
     return $domain . $folder;
 }

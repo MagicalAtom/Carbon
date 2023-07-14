@@ -1,5 +1,6 @@
 <?php
-include "ComponentInterFace.php";
+namespace Carbon\Component;
+use
 class Component implements ComponentInterFace
 {
     // if send value to component ,

@@ -1,7 +1,6 @@
 <?php
-
+namespace Carbon;
 use Curl\Encoder;
-
 //error_reporting(0);
 require_once('mainLoader.php');
 class Carbon extends Value implements CarbonInterFace
@@ -54,7 +53,7 @@ class Carbon extends Value implements CarbonInterFace
     protected static function showError($keywords, $property)
     {
         foreach (array_keys($property) as $key) {
-            echo (in_array($key, array_values($keywords)) ? null : '<font color="red">found error , not found</font>' . "<br>" . "{{ " . $key . " }}" . "<br>" . "in Carbon" . "<br>");
+            echo (in_array($key, array_values($keywords)) ? null : '<font color="red">found error , not found</font>' . "<br>" . "{{ " . $key . " }}" . "<br>" . "in src" . "<br>");
         }
     }
 
@@ -63,7 +62,7 @@ class Carbon extends Value implements CarbonInterFace
     public static function importStyle()
     {
         echo "<link" . " href=" . self::$stylePath . self::$filename . '?v=' . uniqid() . ' rel=stylesheet >';
-        echo "<link" . " href=" . "Carbon" . DIRECTORY_SEPARATOR .  "StyleEngine" . DIRECTORY_SEPARATOR .  "Colors.css " . "rel=stylesheet>";
+        echo "<link" . " href=" . "src" . DIRECTORY_SEPARATOR .  "StyleEngine" . DIRECTORY_SEPARATOR .  "Colors.css " . "rel=stylesheet>";
     }
 
     public static function Text(array $property)
@@ -923,7 +922,7 @@ return "var(--{$color}-{$shade})";
 
 
 
-            echo "<select id=\"Carbon\" name=\"$name\" style=\"$Style\" class=\"$bs $class\">";
+            echo "<select id=\"src\" name=\"$name\" style=\"$Style\" class=\"$bs $class\">";
 
 
             echo "<option value=\"0\">$options_text</option>";

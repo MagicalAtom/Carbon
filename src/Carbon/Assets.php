@@ -1,5 +1,5 @@
 <?php
-include "functions/helper.php";
+include "Helper/Helper.php";
 trait Assets
 {
     protected static function write($filename,$style){

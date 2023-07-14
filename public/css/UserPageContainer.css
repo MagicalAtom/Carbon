@@ -1,0 +1,7 @@
+.navbar{
+background-color:#8BC34A;
+display: flex;
+height:200px;
+width:500px;
+flex-direction:column;
+}
